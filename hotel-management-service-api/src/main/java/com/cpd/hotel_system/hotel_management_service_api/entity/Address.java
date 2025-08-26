@@ -1,9 +1,6 @@
 package com.cpd.hotel_system.hotel_management_service_api.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "address")
@@ -26,6 +23,10 @@ public class Address {
 
     @Column(name = "latitude", nullable = false)
     private String latitude;
+
+    @OneToOne
+    @JoinColumn(name = "branch_id")
+    private Branch branch;
 
 
 }
