@@ -31,7 +31,7 @@ public class Room {
 
     @ManyToOne
     @JoinColumn(name = "branch_id")
-    private Room room;
+    private Branch branch;
 
     @OneToMany(mappedBy = "room")
     private List<Facility> facilities;
